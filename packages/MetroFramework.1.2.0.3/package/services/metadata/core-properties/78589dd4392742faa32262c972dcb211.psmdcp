@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?><coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties"><dc:creator>Jens Thiel</dc:creator><dc:description>Metro UI of Windows 8 for .NET Windows Forms applications.
+		
+		Install this package to automatically pull in required dependencies.</dc:description><dc:identifier>MetroFramework</dc:identifier><version>1.2.0.3</version><keywords>Windows Forms Metro Framework UI MetroFramework ModernUI</keywords><dc:title>MetroFramework Installer</dc:title></coreProperties>

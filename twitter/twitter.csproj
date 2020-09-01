@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57D29DCB-E5A6-4473-A396-E302CA1877E0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>twitter</RootNamespace>
+    <AssemblyName>twitter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>D:\MaterialSkin\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controls\analytics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\analytics.Designer.cs">
+      <DependentUpon>analytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\analyticsItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\analyticsItem.Designer.cs">
+      <DependentUpon>analyticsItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\comment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\comment.Designer.cs">
+      <DependentUpon>comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\comments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\comments.Designer.cs">
+      <DependentUpon>comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\follow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\follow.Designer.cs">
+      <DependentUpon>follow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\like.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\like.Designer.cs">
+      <DependentUpon>like.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\myProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\myProfile.Designer.cs">
+      <DependentUpon>myProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\post.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\post.Designer.cs">
+      <DependentUpon>post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\profileTooltip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\profileTooltip.Designer.cs">
+      <DependentUpon>profileTooltip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\retweet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\retweet.Designer.cs">
+      <DependentUpon>retweet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\searchResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\searchResult.Designer.cs">
+      <DependentUpon>searchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\trending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\trending.Designer.cs">
+      <DependentUpon>trending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="landing page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="landing page.Designer.cs">
+      <DependentUpon>landing page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="profile.Designer.cs">
+      <DependentUpon>profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="twiterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>twiterDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="controls\analytics.resx">
+      <DependentUpon>analytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\analyticsItem.resx">
+      <DependentUpon>analyticsItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\comment.resx">
+      <DependentUpon>comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\comments.resx">
+      <DependentUpon>comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\follow.resx">
+      <DependentUpon>follow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\like.resx">
+      <DependentUpon>like.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\myProfile.resx">
+      <DependentUpon>myProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\post.resx">
+      <DependentUpon>post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\profileTooltip.resx">
+      <DependentUpon>profileTooltip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\retweet.resx">
+      <DependentUpon>retweet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\searchResult.resx">
+      <DependentUpon>searchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\trending.resx">
+      <DependentUpon>trending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="landing page.resx">
+      <DependentUpon>landing page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="profile.resx">
+      <DependentUpon>profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\p.bin" />
+    <None Include="twiterDataSet.xsc">
+      <DependentUpon>twiterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="twiterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>twiterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="twiterDataSet.xss">
+      <DependentUpon>twiterDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\delete red.png" />
+    <None Include="Resources\delete blue.png" />
+    <None Include="Resources\analytics.png" />
+    <None Include="Resources\analytics black.png" />
+    <None Include="Resources\picture.png" />
+    <None Include="Resources\shutdown-shut-close-power-off-switchoff-3-139221.png" />
+    <None Include="Resources\shutdown-shut-close-power-off-switchoff-3-13922.png" />
+    <None Include="Resources\red heart.png" />
+    <None Include="Resources\profile blue.png" />
+    <None Include="Resources\profile black.png" />
+    <None Include="Resources\home blue.png" />
+    <None Include="Resources\home black.png" />
+    <None Include="Resources\empty retweet.png" />
+    <None Include="Resources\empty heart.png" />
+    <None Include="Resources\empty comment.png" />
+    <None Include="Resources\blue retweet.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
